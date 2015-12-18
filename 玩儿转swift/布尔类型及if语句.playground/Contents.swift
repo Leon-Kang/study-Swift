@@ -7,19 +7,19 @@ let imfalseVar = false
 
 if imfalseVar
 {
-    println("I'm true!")
+    print("I'm true!")
 }
 else if 3 + 4 == 7
 {
-    println("7")
+    print("7")
 }
 else
 {
-    println("I'm false!")
+    print("I'm false!")
 }
 
 var a:Int = 1
 if a == 1
 {
-    println("I'm true!")
+    print("I'm true!")
 }
