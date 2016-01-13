@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KLAVcontroller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06q-bJ-ukx">
+                                <rect key="frame" x="0.0" y="20" width="600" height="248"/>
+                                <connections>
+                                    <segue destination="EmZ-xv-7yi" kind="embed" identifier="videoSegue" id="9g2-gC-fIE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="06q-bJ-ukx" secondAttribute="trailing" id="2dZ-9Q-xy5"/>
+                            <constraint firstItem="06q-bJ-ukx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h5e-K6-lf3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="06q-bJ-ukx" secondAttribute="bottom" constant="332" id="ucu-E4-RZh"/>
+                            <constraint firstItem="06q-bJ-ukx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zIE-xt-sty"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224" y="339"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="Fsy-ef-qG1">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="EmZ-xv-7yi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7n-6N-nJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="163"/>
+        </scene>
+    </scenes>
+</document>
