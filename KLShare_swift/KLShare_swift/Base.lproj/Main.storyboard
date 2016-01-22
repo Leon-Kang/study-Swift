@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KLShare_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxk-27-1ga">
+                                <rect key="frame" x="264" y="73" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sCg-w0-VGk"/>
+                                    <constraint firstAttribute="width" constant="73" id="u0j-JG-sud"/>
+                                </constraints>
+                                <state key="normal" title="Share Text"/>
+                                <connections>
+                                    <action selector="shareText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5o-1F-IOg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-T6-NXN">
+                                <rect key="frame" x="257" y="382" width="86" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="ZGu-0L-WVw"/>
+                                    <constraint firstAttribute="height" constant="30" id="qGs-XR-5ex"/>
+                                </constraints>
+                                <state key="normal" title="Share Image"/>
+                                <connections>
+                                    <action selector="shareImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voh-fO-avF"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="1sP-Fo-lKq">
+                                <rect key="frame" x="122" y="111" width="357" height="249"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="249" id="6Sl-Dj-4x9"/>
+                                    <constraint firstAttribute="width" constant="357" id="QA8-l5-STS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RIa-T6-NXN" firstAttribute="top" secondItem="1sP-Fo-lKq" secondAttribute="bottom" constant="22" id="6Jz-Q5-Qyf"/>
+                            <constraint firstItem="1sP-Fo-lKq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I3T-wS-XXN"/>
+                            <constraint firstItem="RIa-T6-NXN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nb5-9O-RKK"/>
+                            <constraint firstItem="1sP-Fo-lKq" firstAttribute="top" secondItem="Oxk-27-1ga" secondAttribute="bottom" constant="8" id="PZz-Pz-sF7"/>
+                            <constraint firstItem="Oxk-27-1ga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqw-g6-2Ms"/>
+                            <constraint firstItem="Oxk-27-1ga" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="y6N-F9-yDT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="1sP-Fo-lKq" id="zhj-kM-Vi4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="267"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3" width="800" height="739"/>
+    </resources>
+</document>
