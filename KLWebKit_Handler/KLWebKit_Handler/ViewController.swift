@@ -52,5 +52,23 @@ extension wkScriptMessageHandler {
         print(message.name)
         
         
+        let dic = message.body as! Dictionary<String,String>
+        
+        let person = dic["className"]!
+        let showName = dic["method"]!
+        
+        let bundleName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")!.description
+        
+        let personType = bundleName + "." + person
+        print(personType)
+        
+        let personCls = NSClassFromString(personType) as! NSObject.Type
+        print(personCls)
+        
+        let aPerson = personCls.init()
+        let showMe = Selector(showName)
+        
+        aPerson.performSelector(showMe)
+        
     }
 }
